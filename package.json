@@ -4,9 +4,7 @@
   "description": "Boilerplate for the Quality Assurance and Testing with Chai challenges",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "mocha --watchAll --ui tdd tests/1_unit-tests.js",
-    "tdd": "mocha tests/1_unit-tests.js --watch --recursive"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "1.19.0",
