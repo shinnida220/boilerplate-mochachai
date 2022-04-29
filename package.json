@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha --ui=tdd --colors tests/2_*"
+    "test": "mocha --ui=tdd --watch --colors tests/2_functional-tests.js"
   },
   "dependencies": {
     "body-parser": "1.19.0",
