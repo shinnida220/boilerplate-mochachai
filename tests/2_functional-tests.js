@@ -85,12 +85,12 @@ suite('Functional Tests with Zombie.js', function () {
   suite('"Famous Italian Explorers" form', function () {
     // #5
     test('Submit the surname "Colombo" in the HTML form', function (done) {
-      browser.fill("surname", "Colombo").then(_ => {
-        browser.pressButton('submit', _ => {
+      browser.fill("surname", 'colombo').then(function () {
+        browser.pressButton('submit', function () {
           browser.assert.success();
           browser.assert.status(200);
-          browser.assert.text("span#name", "Cristoforo");
-          browser.assert.text("span#surname", "Colombo");
+          browser.assert.text("span#surname", Colombo);
+          browser.assert.text("span#name", Cristoforo);
           browser.assert.elements("span#dates", 1);
           done();
         })
@@ -98,12 +98,12 @@ suite('Functional Tests with Zombie.js', function () {
     });
     // #6
     test('Submit the surname "Vespucci" in the HTML form', function (done) {
-      browser.fill('surname', "Vespucci").then(_ => {
-        browser.pressButton('submit', _ => {
+      browser.fill('surname', 'vespucci').then(function () {
+        browser.pressButton('submit', function () {
           browser.assert.success();
           browser.assert.status(200);
-          browser.assert.text("span#name", "Amerigo");
-          browser.assert.text("span#surname", "Vespucci");
+          browser.assert.text("span#name", Amerigo);
+          browser.assert.text("span#surname", Vespucci);
           browser.assert.elements("span#dates", 1);
           done();
         })
